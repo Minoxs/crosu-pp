@@ -1,0 +1,16 @@
+[package]
+name = "crosu-pp"
+version = "0.1.0"
+edition = "2021"
+authors = ["Mino"]
+description = "C bindings for the rosu-pp package"
+readme = "README.md"
+repository = "https://github.com/Minoxs/crosu-pp"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+libc = "0.2.138"
+rosu-pp = "0.9.2"
