@@ -32,6 +32,7 @@ pub enum CGameMode {
 }
 
 impl CGameMode {
+    #[inline]
     fn to_rust(self) -> GameMode {
         match self {
             CGameMode::Osu => { GameMode::Osu }

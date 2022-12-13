@@ -66,6 +66,10 @@ impl_cosu!(COsuDifficultyAttributes, OsuDifficultyAttributes);
 #[repr(C)]
 #[derive(Default)]
 pub struct COsuDiffResult {
+    /// Flag that indicates whether difficulty calculation succeeded
     pub success: bool,
+    /// PP value if it was calculated along map difficulty, 0 otherwise
+    pub pp: f64,
+    /// Calculated map difficulty attributes
     pub attr: COsuDifficultyAttributes,
 }

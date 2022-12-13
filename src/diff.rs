@@ -4,6 +4,7 @@ use rosu_pp::{Beatmap, BeatmapExt, DifficultyAttributes, GameMode, ParseResult};
 
 use crate::CharPtr;
 
+#[inline]
 /// Helper function that gets difficulty from beatmap
 /// If is_file is true, treats the ptr to a string to the file path
 /// Otherwise treats the ptr as a byte array

@@ -3,6 +3,7 @@ use rosu_pp::{Beatmap, BeatmapExt, DifficultyAttributes};
 use crate::{CGameMode, CharPtr, CScore};
 use crate::diff::get_difficulty;
 
+#[inline]
 /// Helper function to get pp from already calculated attributes
 pub fn get_pp(attr: DifficultyAttributes, score: CScore) -> f64 {
     Beatmap::default()

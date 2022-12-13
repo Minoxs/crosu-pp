@@ -39,6 +39,7 @@ typedef struct {
 
 typedef struct {
 		bool success;
+		f64 pp;
 		OsuDifficultyAttributes attr;
 } OsuDiffResult;
 
@@ -62,6 +63,7 @@ typedef enum {
 // Osu
 OsuDiffResult GetOsuDifficultyAttributes(char* ptr, bool isFile, u32 mods);
 f64 GetOsuPP(OsuDifficultyAttributes diff, Score score);
+OsuDiffResult GetOsuPPFromMap(char* ptr, bool isFile, u32 mods, Score score);
 
 // Generic
 // Returns PP, but requires recalculating map difficulty every time
