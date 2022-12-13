@@ -1,7 +1,8 @@
 use std::ffi::CStr;
 
 use rosu_pp::{Beatmap, BeatmapExt, DifficultyAttributes, GameMode, ParseResult};
-use crate::internal::CharPtr;
+
+use crate::CharPtr;
 
 /// Helper function that gets difficulty from beatmap
 /// If is_file is true, treats the ptr to a string to the file path

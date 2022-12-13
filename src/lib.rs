@@ -1,3 +1,5 @@
-extern crate core;
+pub type CharPtr = *const libc::c_char;
 
-mod internal;
+mod diff;
+mod perf;
+mod osu;
