@@ -1,8 +1,8 @@
 use rosu_pp::GameMode;
 use rosu_pp::osu::{OsuAttributeProvider, OsuDifficultyAttributes};
 
-use crate::internal::CharPtr;
-use crate::internal::diff::get_difficulty;
+use crate::CharPtr;
+use crate::diff::get_difficulty;
 
 #[repr(C)]
 #[derive(Default)]
