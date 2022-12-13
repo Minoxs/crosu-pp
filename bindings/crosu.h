@@ -22,7 +22,6 @@ const u32
 				SO = 0b1000000000;
 
 typedef struct {
-		bool success;
 		f64 aim;
 		f64 speed;
 		f64 flashlight;
@@ -38,6 +37,11 @@ typedef struct {
 		usize maxCombo;
 } OsuDifficultyAttributes;
 
-OsuDifficultyAttributes GetOsuDifficultyAttributes(char* ptr, bool isFile, u32 mods);
+typedef struct {
+		bool success;
+		OsuDifficultyAttributes attr;
+} OsuDiffResult;
+
+OsuDiffResult GetOsuDifficultyAttributes(char* ptr, bool isFile, u32 mods);
 
 #endif // CROSU_PP
