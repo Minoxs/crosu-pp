@@ -42,6 +42,14 @@ typedef struct {
 		OsuDifficultyAttributes attr;
 } OsuDiffResult;
 
+typedef struct {
+		usize combo;
+		usize n300;
+		usize n100;
+		usize n050;
+} Score;
+
 OsuDiffResult GetOsuDifficultyAttributes(char* ptr, bool isFile, u32 mods);
+f64 GetOsuPP(OsuDifficultyAttributes diff, Score score);
 
 #endif // CROSU_PP

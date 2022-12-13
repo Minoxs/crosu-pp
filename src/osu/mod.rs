@@ -1,4 +1,5 @@
 use rosu_pp::osu::OsuDifficultyAttributes;
+
 mod diff;
 mod perf;
 
