@@ -49,7 +49,22 @@ typedef struct {
 		usize n050;
 } Score;
 
+typedef enum {
+		Osu = 0,
+		Taiko = 1,
+		Catch = 2,
+		Mania = 3
+} GameMode;
+
+// Functions of specific modes will return the required attributes
+// to calculate pp without requiring beatmap file
+
+// Osu
 OsuDiffResult GetOsuDifficultyAttributes(char* ptr, bool isFile, u32 mods);
 f64 GetOsuPP(OsuDifficultyAttributes diff, Score score);
+
+// Generic
+// Returns PP, but requires recalculating map difficulty every time
+f64 GetPPFromMap(char* ptr, bool isFile, u32 mods, GameMode mode, Score score);
 
 #endif // CROSU_PP
