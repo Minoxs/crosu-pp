@@ -13,6 +13,7 @@ pub fn get_pp(attr: DifficultyAttributes, score: CScore) -> f64 {
         .n300(score.n300)
         .n100(score.n100)
         .n50(score.n050)
+        .n_misses(score.misses)
         .calculate()
         .pp()
 }
