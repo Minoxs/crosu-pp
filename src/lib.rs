@@ -17,6 +17,8 @@ pub struct CScore {
     pub  n100: usize,
     /// Amount of 50s
     pub  n050: usize,
+    /// Amount of misses
+    pub misses: usize,
 }
 
 #[repr(C)]

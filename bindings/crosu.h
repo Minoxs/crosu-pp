@@ -48,6 +48,7 @@ typedef struct {
 	usize n300;
 	usize n100;
 	usize n050;
+	usize misses;
 } Score;
 
 typedef enum {
