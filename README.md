@@ -17,8 +17,6 @@ approach to "fix" that.
 That is, expose all functionality through a simplified input->output API. Only passing over what is needed.
 Thanks to this, it shouldn't be too hard to plop this library anywhere and use it.
 
-P.s: Part of me wanted to name this "CRUST-PP" but that would obscure the heart of what I'm using, so it feels a bit cheap to do that.
-
 # Building
 
 Just run `cargo build --release` and you should have a shared library ready to use.
@@ -39,7 +37,7 @@ To be added
 
 # Thanks
 
-To the maintainers of the [rosu-pp](https://github.com/MaxOhn/rosu-pp) calculator thingy,
+To the maintainers of [rosu-pp](https://github.com/MaxOhn/rosu-pp),
 I went through hell and back looking for something like this.
 
 To ppy and the osu team :)
