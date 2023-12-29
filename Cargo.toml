@@ -9,7 +9,7 @@ repository = "https://github.com/Minoxs/crosu-pp"
 license = "MIT"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["rlib", "cdylib"]
 
 [dependencies]
 libc = "0.2.138"

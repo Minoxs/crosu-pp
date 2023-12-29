@@ -2,9 +2,9 @@ use rosu_pp::GameMode;
 
 pub type CharPtr = *const libc::c_char;
 
-mod diff;
-mod perf;
-mod osu;
+pub mod diff;
+pub mod perf;
+pub mod osu;
 
 #[repr(C)]
 /// Struct containing all data required for PP calculation
