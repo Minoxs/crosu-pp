@@ -1,3 +1,4 @@
+use rosu_pp::DifficultyAttributes;
 use rosu_pp::osu::OsuDifficultyAttributes;
 
 mod diff;
@@ -60,8 +61,20 @@ macro_rules! impl_cosu {
     }
 }
 
+macro_rules! impl_diff {
+    ($type1:ident, $type2:ident, $type3:ident) => {
+        impl From<$type1> for $type2 {
+            #[inline]
+            fn from(attr: $type1) -> Self {
+                $type2::from($type3::from(attr))
+            }
+        }
+    }
+}
+
 impl_cosu!(OsuDifficultyAttributes, COsuDifficultyAttributes);
 impl_cosu!(COsuDifficultyAttributes, OsuDifficultyAttributes);
+impl_diff!(COsuDifficultyAttributes, DifficultyAttributes, OsuDifficultyAttributes);
 
 #[repr(C)]
 #[derive(Default)]
